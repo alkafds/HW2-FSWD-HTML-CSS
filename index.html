@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <title>barayaGO! - Bandung Travel Service</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Prompt:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #6699FF;
+    --secondary: #33CC99;
+    --dark: #110253;
+    --body: #fff;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--body)
+
+}
+
+.navbar {
+    position: sticky;
+    background-color: white;
+}
+
+.navbar-brand {
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 10%;
+}
+
+.btn {
+    background-color:#33CC99;
+}
+
+.btn:hover {
+    background-color:#6699FF;
+}
+
+a {
+    color: var(--dark)
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    color: #6699FF;
+}
+
+img {
+    width: 100%;
+}
+
+.hero {
+    background-image: url(https://i.ibb.co/FXLFHFP/bdg-2.jpg);
+    
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+   
+    z-index: -1;
+}
+
+.hero .overlay {
+    position: absolute; 
+    
+    width: 100%; 
+    height: 110%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(21,20,51,0.5); 
+    z-index: 0; 
+}
+
+main h1,h2,h3,h4,h5,h6,p {
+    color:#6699FF;
+}
+
+
+section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.tips {
+    background-color: #6699FF;
+}
+
+.places {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+}
+
+.places .overlay {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21,20,51,0.8);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s  ease;
+    opacity: 0;
+
+}
+
+
+
+.places img {
+    transition: all 0.4s  ease;
+    padding: 10px;
+    
+}
+
+.places:hover .overlay{
+    opacity: 1;
+}
+
+.places:hover img{
+    transform: scale(1.1);
+    
+}
+
+.services {
+    background-color:white;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 2;
+}
+
+.card > button {
+    width: 50%;
+    align-items: center;
+}
+
+.contact {
+    background-color:#6699FF;
+    background-position: center;
+    background-size: cover;
+    background-attachment: absolute;
+    z-index: 2;
+}
+
+.contact h6 {
+    font-style: var(--dark);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+  }
+
+@media only screen and (max-width:600px) {
+  .tips {
+    background-color: #33CC99;
+  }
+  .contact {
+    background-color: #33CC99;
+  }
+  .navbar-brand {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+
+}
+
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://i.ibb.co/7QbGkjy/barayago.png"></a>
+    <button class="navbar-toggler float-xs-left" type="button" data-toggle="collapse" data-target="#navbarNav" 
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#About">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Tips">Tips</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Service">Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Contact">Contact</a>
+        </li>
+      </ul>
+      <button type="button" class="btn btn-primary float-lg-right">Login</button>
+    </div>
+    </div>
+  </nav>
+  <div class="hero vh-100 d-flex align-items-center" >
+    <div class="overlay"></div>
+      <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-12">
+                <h1 class="display-4 font-weight-bold text-light text-center">Your trusted travel service in Bandung.</h1>
+                <p class="display-5 text-light text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium adipisci recusandae placeat harum quidem. 
+                  Soluta repellendus asperiores facere neque veritatis quae omnis a sequi provident cupiditate, hic, saepe perspiciatis ratione.</p>
+            </div>
+        </div>
+      </div>
+  </div>
+<main>
+   <section id="About" class="about">
+    <div class="container-fluid">
+      <div class="col-md-8 mx-auto">
+        <h6 class="font-weight-bold text-center" style="color:#6699FF">ABOUT</h6>
+        <h2 class="font-weight-bold text-center" style="color:#6699FF">Our identity.</h2>
+        <h5 class="text-center" style="color:#6699FF">What we do, who we are.</h5>
+        <br>
+        <p class="text-dark text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis assumenda, 
+          enim unde placeat harum accusantium maxime obcaecati dolor? Quibusdam, autem. Magni adipisci voluptatibus quae amet quod. 
+          A quae fugiat vitae.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+    <section id="tips" class="tips" >
+      <div class="container-fluid">
+        <div class="col-md-8 mx-auto">
+          <h6 class="text-light font-weight-bold text-center" >Tips and Recommendations</h6>
+          <h1 class="text-light font-weight-bold text-center">Places and Foods</h1>
+          <h5 class="text-center text-light">Our carefully chosen, recommended places for you.</h5>
+          <p class="text-light text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis assumenda, 
+            enim unde placeat harum accusantium maxime obcaecati dolor? Quibusdam, autem. Magni adipisci voluptatibus quae amet quod. 
+            A quae fugiat vitae.</p>
+            <br>
+            <div class="row align-items-center">
+              <div class="col-lg-4 col-sm-5">
+                <div class="places">
+                  <a href="#">
+                  <img src="https://i.ibb.co/YXy6yr0/SUNFO.jpg" alt="">
+                  <div class="overlay">
+                    <div class="text">
+                    <h3 class="text-white font-weight-bold">Eateries</h3>
+                    <p class="text-white">Mouth-watering, comforting restaurants</p>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-5">
+                <div class="places">
+                  <a href="#">
+                  <img src="https://i.ibb.co/4gfVynR/bdg-nat.jpg" alt="">
+                  <div class="overlay">
+                    <div class="text">
+                    <h3 class="text-white font-weight-bold">Nature</h3>
+                    <p class="text-white">Green, soothing natural resorts</p>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div> 
+              <div class="col-lg-4 col-sm-5">
+                <div class="places">
+                  <a href="#">
+                  <img src="https://i.ibb.co/N39mKtr/SUNHIS.png" alt="">
+                  <div class="overlay">
+                    <div class="text">
+                    <h3 class="text-white font-weight-bold">History</h3>
+                    <p class="text-white">Enlightening, nostalgic historical places</p>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div> 
+              <div class="col-lg-4 col-sm-5">
+                <div class="places">
+                  <a href="#">
+                  <img src="https://i.ibb.co/zN6Hq78/SUNCUL.jpg" alt="">
+                  <div class="overlay">
+                    <div class="text">
+                    <h3 class="text-white font-weight-bold">Culture</h3>
+                    <p class="text-white">Vibrant, majestic cultural attractions</p>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div>
+                <div class="col-lg-4 col-sm-5">
+                  <div class="places">
+                    <a href="#">
+                    <img src="https://i.ibb.co/c204SDf/SUNFEST.jpg" alt="">
+                    <div class="overlay">
+                      <div class="text">
+                      <h3 class="text-white font-weight-bold">Festival</h3>
+                      <p class="text-white">Diverse, impressive festivals in Bandung</p>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-5">
+                  <div class="places">
+                    <a href="#">
+                    <img src="https://i.ibb.co/QbtgG9k/SUNTEC.jpg">
+                    <div class="overlay">
+                      <div class="text">
+                      <h3 class="text-white font-weight-bold">Tech</h3>
+                      <p class="text-white">Breath-taking, spectacular observatories</p>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+         </div>
+      </div>
+    </section>
+    <section id="services" class="services">
+      <div class="container">
+        <div class="col-md-12 mx-auto">
+          <h6 class="font-weight-bold text-center" style="color:#6699FF">Services</h6>
+          <h1 class="font-weight-bold text-center" style="color:#6699FF">Available Travel Services</h1>
+          <h5 class="text-center" style="color:#6699FF">Travel services available for you in Bandung.</h5>
+          <p class="text-dark text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis assumenda, 
+            enim unde placeat harum accusantium maxime obcaecati dolor? Quibusdam, autem. Magni adipisci voluptatibus quae amet quod. 
+            A quae fugiat vitae.</p>
+          
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-sm-6 p-3">
+              <div class="card">
+              <div class="card-body">
+                <h6 class="card=title">Basic Services</h6>
+                <h1 class="card-text">$39.99</h1>
+                <hr>
+                <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed facere cumque 
+                  itaque soluta veritatis odit laudantium qui consectetur minima id vero eius repudiandae, iste dolorum velit harum, sequi fugit sint!</p>
+                <button class="btn btn-primary">Choose</button>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 p-3">
+              <div class="card">
+              <div class="card-body">
+                <h6 class="card=title">Premium Services</h6>
+                <h1 class="card-text">$59.99</h1>
+                <hr>
+                <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed facere cumque 
+                  itaque soluta veritatis odit laudantium qui consectetur minima id vero eius repudiandae, iste dolorum velit harum, sequi fugit sint!</p>
+                <button class="btn btn-primary">Choose</button>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 p-3">
+              <div class="card">
+              <div class="card-body">
+                <h6 class="card=title">Comfort Services</h6>
+                <h1 class="card-text">$99.99</h1>
+                <hr>
+                <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed facere cumque 
+                  itaque soluta veritatis odit laudantium qui consectetur minima id vero eius repudiandae, iste dolorum velit harum, sequi fugit sint!</p>
+                <button class="btn btn-primary">Choose</button>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 p-3">
+              <div class="card">
+              <div class="card-body">
+                <h6 class="card=title">Luxury Services</h6>
+                <h1 class="card-text">$199.99</h1>
+                <hr>
+                <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed facere cumque 
+                  itaque soluta veritatis odit laudantium qui consectetur minima id vero eius repudiandae, iste dolorum velit harum, sequi fugit sint!</p>
+                <button class="btn btn-primary">Choose</button>
+              </div>
+              </div>
+            </div>
+          </div>
+         </div>
+       </section>   
+  <section id="gallery">
+    <div class="container">
+      <div class="col">
+        <h6 class="font-weight-bold text-center" style="color: #6699FF">GALLERY</h6>
+        <h1 class="font-weight-bold text-center" style="color:#6699FF">Our journey.</h1>
+        <h5 class="text-center " style="color:#6699FF">Our journeys throughout the years.</h5>
+        <br>
+      </div>
+      
+      <div class="row p-0 m-0">
+      <div class="col-md-4 pb-3 pl-2">
+        <a href="https://i.ibb.co/w6GgFX0/bdg-6.jpg" target="_blank">
+        <img src="https://i.ibb.co/w6GgFX0/bdg-6.jpg" class="w-100 h-100" alt="gallery" class="img-thumbnail">
+      </a>
+      </div>
+      <div class="col-md-4 pb-3 pl-2">
+        <a href="https://i.ibb.co/j5GgjHP/bdg-3.jpg" target="_blank">
+        <img src="https://i.ibb.co/j5GgjHP/bdg-3.jpg" alt="gallery" class="img-thumbnail">
+      </a>
+      </div>
+      <div class="col-md-4 pb-3 pl-2">
+        <a href="https://i.ibb.co/Th0mgZ5/bdg-6.jpg" target="_blank">
+        <img src="https://i.ibb.co/Th0mgZ5/bdg-6.jpg" alt="gallery" class="img-thumbnail">
+      </a>
+      </div>
+      
+      <div class="col-md-4 pb-3 pl-2">
+        <a href="https://i.ibb.co/bb2nPMh/bdg-1.jpg" target="_blank">
+        <img src="https://i.ibb.co/bb2nPMh/bdg-1.jpg" alt="gallery" class="img-thumbnail">
+      </a>
+      </div>
+      <div class="col-md-4 pb-3 pl-2">
+        <a href="https://i.ibb.co/G97MDnZ/bdg-5.jpg" target="_blank">
+        <img src="https://i.ibb.co/G97MDnZ/bdg-5.jpg" alt="gallery" class="img-thumbnail">
+        </a>
+      </div>
+      <div class="col-md-4 pb-3 pl-2">
+        <a href="https://i.ibb.co/yYMBcFG/bdg-7.jpg" target="_blank">
+        <img src="https://i.ibb.co/yYMBcFG/bdg-7.jpg" alt="gallery" class="img-thumbnail">
+      </a>
+      </div>
+
+      </div>
+    </div>
+  </section>
+  <section id="Contact" class="contact">
+
+  <div class="container">
+    <div class="col-md-8 mx-auto">
+      <h6 class="font-weight-bold text-center text-light">CONTACT</h6>
+      <h1 class="font-weight-bold text-center text-light">Interested?</h1>
+      <h5 class="text-center text-light">Get in touch with us.</h5>
+      <br>
+      <br>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+        <p class=" text-light">barayaGO Media, Ltd. <br>
+          Jl. Martanegara No.56 <br>
+          Cihapit, Bandung Wetan, Bandung<br>
+          Tel : (62) 22-123-456-789 <br>
+          Fax : (62) 22-245-788-224 <br>
+          <a class="text-light" href="#">globalservice@goreatravel.co.kr</a>
+        </p>
+        </div>
+        <div class="col">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputname">Full Name</label>
+                <input type="name" class="form-control" id="inputname" placeholder="Full Name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputemail">Email</label>
+                <input type="email" class="form-control" id="inputemail" placeholder="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+              <label for="inputphone">Phone Number</label>
+              <input type="text" class="form-control" id="inputphone" placeholder="(code) - (phone number)">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputmessage">Messsage</label>
+                <textarea class="form-control" id="inputmessage1" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  I agree to the <a href="#" class="text-light">Terms and Conditions</a>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+        </div>
+      </div>
+  </section>
+</main>
+ <footer>
+  <div class="container align-items-center">
+    <img src="https://i.ibb.co/7QbGkjy/barayago.png" class="center">
+    
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#Home" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#About" class="nav-link px-2 text-muted">About</a></li>
+        <li class="nav-item"><a href="#Tips" class="nav-link px-2 text-muted">Tips</a></li>
+        <li class="nav-item"><a href="#Service" class="nav-link px-2 text-muted">Services</a></li>
+        <li class="nav-item"><a href="#Gallery" class="nav-link px-2 text-muted">Gallery</a></li>
+        <li class="nav-item"><a href="#Contact" class="nav-link px-2 text-muted">Contact</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2023 barayaGO Media, Ltd.</p>
+    
+  </div>
+ </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" 
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
