@@ -61,27 +61,20 @@ img {
 }
 
 .hero {
-    background-image: url(https://i.ibb.co/FXLFHFP/bdg-2.jpg);
     
     background-position: center;
-    background-size: cover;
     background-attachment: fixed;
-   
+    background: linear-gradient(rgb(102,153,255,0.3), rgb(0,0,0,0.8)), url("https://i.ibb.co/FXLFHFP/bdg-2.jpg"); 
+    background-size: cover;
     z-index: -1;
 }
 
-.hero .overlay {
-    position: absolute; 
-    
-    width: 100%; 
-    height: 107.2%; 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(21,20,51,0.5); 
-    z-index: 0; 
+.hero img {
+  width: auto;
+  height:auto;
 }
+
+
 
 main h1,h2,h3,h4,h5,h6,p {
     color:#6699FF;
@@ -93,7 +86,10 @@ section {
     margin-bottom: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
+    background-color: white;
 }
+
+
 
 .tips {
     background-color: #6699FF;
@@ -172,18 +168,19 @@ section {
     width: 10%;
   }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:700px) {
   .tips {
     background-color: #33CC99;
   }
   .contact {
     background-color: #33CC99;
   }
+
   .navbar-brand {
     top: 0;
     left: 0;
-    width: 50%;
-    height: 50%;
+    width: 100px;
+    
   }
 
   .btn {
@@ -193,7 +190,30 @@ section {
     background-color:#33CC99;
   }
 
+  .hero .overlay {
+    height: cover;
+  }
+ 
+  .footer-brand {
+    top: 0px;
+    left: 0px;
+    width: 200px;
+  }
+
 }
+  @media only screen and (max-width:1200px) {
+    
+
+    .hero .overlay {
+    height: cover;
+    
+  }
+  
+
+
+}
+
+
 
     </style>
 </head>
@@ -232,7 +252,7 @@ section {
     </div>
   </nav>
   <div class="hero vh-100 d-flex align-items-center" >
-    <div class="overlay"></div>
+    
       <div class="container">
             <div class="row">
             <div class="col-md-12">
@@ -243,6 +263,7 @@ section {
         </div>
       </div>
   </div>
+
 <main>
    <section id="About" class="about">
     <div class="container-fluid">
@@ -258,7 +279,7 @@ section {
     </div>
     </div>
   </section>
-    <section id="Tips" class="tips" >
+    <section id="tips" class="tips" >
       <div class="container-fluid">
         <div class="col-md-8 mx-auto">
           <h6 class="text-light font-weight-bold text-center" >Tips and Recommendations</h6>
@@ -350,7 +371,7 @@ section {
          </div>
       </div>
     </section>
-    <section id="Services" class="services">
+    <section id="services" class="services">
       <div class="container">
         <div class="col-md-12 mx-auto">
           <h6 class="font-weight-bold text-center" style="color:#6699FF">Services</h6>
@@ -413,7 +434,7 @@ section {
           </div>
          </div>
        </section>   
-  <section id="Gallery" class="gallery">
+  <section id="gallery" class="gallery">
     <div class="container">
       <div class="col">
         <h6 class="font-weight-bold text-center" style="color: #6699FF">GALLERY</h6>
@@ -526,7 +547,7 @@ section {
 </main>
  <footer>
   <div class="container align-items-center">
-    <img src="https://i.ibb.co/7QbGkjy/barayago.png" class="center">
+    <img src="https://i.ibb.co/7QbGkjy/barayago.png" class="footer-brand center">
     
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="#Home" class="nav-link px-2 text-muted">Home</a></li>
